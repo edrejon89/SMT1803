@@ -6,33 +6,46 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 
+import java.text.Normalizer;
+import java.util.Locale;
+
 public class AltaUsuario extends BaseTest{
+
     //Generating test data
-    Faker faker = new Faker();
+    Locale locale = new Locale("es_MX");
+    Faker faker = new Faker(locale);
     String  firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
     String secondLastName = faker.name().lastName();
-    String mobilePhone = faker.phoneNumber().cellPhone().replace("-","");
+    String mobilePhone = faker.phoneNumber().cellPhone();
     String position = faker.company().profession();
-    String company = faker.company().name().replace(",","");
-    String phone = faker.phoneNumber().phoneNumber().replace("-","");
+    String company = faker.company().name();
+    String phone = faker.phoneNumber().phoneNumber();
     String email = faker.internet().emailAddress();
+
     String password = "Abcd1234";
     //Test Execution
    // JavascriptExecutor js = (JavascriptExecutor) driver;
     @Test
     public void testAltaUsuario() throws Exception {
-        phone = phone.replace("x","");
-        phone =  phone.replace("(","");
-        phone = phone.replace(")","");
-        phone = phone.replace(".","");
+//        phone = phone.replace("x","");
+//        phone =  phone.replace("(","");
+//        phone = phone.replace(")","");
+//        phone = phone.replace(".","");
+//        phone = phone.replace(" ","");
+//
+//        mobilePhone = mobilePhone.replace("x","");
+//        mobilePhone =  mobilePhone.replace("(","");
+//        mobilePhone = mobilePhone.replace(")","");
+//        mobilePhone = mobilePhone.replace(".","");
+//        mobilePhone = mobilePhone.replace(" ","");
+//        company = company.replace("-","");
+//        company = company.replace(".","");
+//
+//        email = Normalizer.normalize(email, Normalizer.Form.NFD);
+//        phoneClean(mobilePhone);
+//        phoneClean(phone);
 
-        mobilePhone = mobilePhone.replace("x","");
-        mobilePhone =  mobilePhone.replace("(","");
-        mobilePhone = mobilePhone.replace(")","");
-        mobilePhone = mobilePhone.replace(".","");
-
-        company = company.replace("-","");
 
         driver.get(baseUrl);
         try {
@@ -46,13 +59,13 @@ public class AltaUsuario extends BaseTest{
             driver.findElement(By.id("apellidom")).sendKeys(secondLastName);
             driver.findElement(By.name("genero")).click();
             driver.findElement(By.id("celular")).clear();
-            driver.findElement(By.id("celular")).sendKeys(mobilePhone);
+            driver.findElement(By.id("celular")).sendKeys(phoneClean(mobilePhone));
             driver.findElement(By.id("puestoempresarial")).clear();
             driver.findElement(By.id("puestoempresarial")).sendKeys(position);
             driver.findElement(By.id("corporativo")).clear();
-            driver.findElement(By.id("corporativo")).sendKeys(company);
+            driver.findElement(By.id("corporativo")).sendKeys(companyClean(company));
             driver.findElement(By.id("telempresa")).clear();
-            driver.findElement(By.id("telempresa")).sendKeys(phone.replace("x",""));
+            driver.findElement(By.id("telempresa")).sendKeys(phoneClean(phone));
             //js.executeScript("window.scrollBy(0,1000)");
             driver.findElement(By.id("industria")).click();
             new Select(driver.findElement(By.id("industria"))).selectByVisibleText("Desarrollo de Software");
@@ -65,7 +78,7 @@ public class AltaUsuario extends BaseTest{
             driver.findElement(By.id("ciudad")).sendKeys("Merida");
             driver.findElement(By.id("correo")).click();
             driver.findElement(By.id("correo")).clear();
-            driver.findElement(By.id("correo")).sendKeys(email);
+            driver.findElement(By.id("correo")).sendKeys(mailCleaner(email));
             driver.findElement(By.id("contrasenia")).clear();
             driver.findElement(By.id("contrasenia")).sendKeys(password);
             driver.findElement(By.id("confirmar_contrasenia")).clear();
@@ -75,6 +88,35 @@ public class AltaUsuario extends BaseTest{
         }catch (Exception e){
             Assertions.fail(e.getMessage());
         }
+    }
+
+    //Funtions to clean our properties
+
+    public String phoneClean (String input){
+        //input = Normalizer.normalize(input, Normalizer.Form.NFD);
+        input =  input.replace("x","");
+        input =  input.replace("(","");
+        input =  input.replace(")","");
+        input =  input.replace(".","");
+        input =  input.replace(" ","");
+        input =  input.replace("-","");
+        String phoneCleaned = input;
+        return phoneCleaned;
+    }
+
+    public String companyClean(String input){
+        input = input.replace(",","");
+        input =  input.replace("-","");
+        input =   input.replace(".","");
+        String companyCleaned = input;
+        return companyCleaned;
+
+    }
+
+    public String mailCleaner(String input) {
+        input =  Normalizer.normalize(email, Normalizer.Form.NFD);
+        String mailCleaned=input.replaceAll("\\p{M}", "");
+        return mailCleaned;
     }
 }
 
