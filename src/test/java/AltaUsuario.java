@@ -28,24 +28,6 @@ public class AltaUsuario extends BaseTest{
    // JavascriptExecutor js = (JavascriptExecutor) driver;
     @Test
     public void testAltaUsuario() throws Exception {
-//        phone = phone.replace("x","");
-//        phone =  phone.replace("(","");
-//        phone = phone.replace(")","");
-//        phone = phone.replace(".","");
-//        phone = phone.replace(" ","");
-//
-//        mobilePhone = mobilePhone.replace("x","");
-//        mobilePhone =  mobilePhone.replace("(","");
-//        mobilePhone = mobilePhone.replace(")","");
-//        mobilePhone = mobilePhone.replace(".","");
-//        mobilePhone = mobilePhone.replace(" ","");
-//        company = company.replace("-","");
-//        company = company.replace(".","");
-//
-//        email = Normalizer.normalize(email, Normalizer.Form.NFD);
-//        phoneClean(mobilePhone);
-//        phoneClean(phone);
-
 
         driver.get(baseUrl);
         try {
