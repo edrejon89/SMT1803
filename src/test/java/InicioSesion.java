@@ -7,11 +7,13 @@ import static org.hamcrest.CoreMatchers.*;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import sun.jvm.hotspot.utilities.Assert;
 
 
 public class InicioSesion extends BaseTest{
@@ -20,24 +22,28 @@ public class InicioSesion extends BaseTest{
     @Test
     public void testInicioSesion() throws Exception {
         driver.get(baseUrl);
-        driver.findElement(By.id("nombre")).click();
-        driver.findElement(By.id("nombre")).clear();
-        driver.findElement(By.id("nombre")).sendKeys("erejon@walook.com.mx");
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*Contraseña'])[1]/following::input[1]")).click();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*Contraseña'])[1]/following::input[1]")).clear();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*Contraseña'])[1]/following::input[1]")).sendKeys("Rejon150");
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*Contraseña'])[1]/following::input[2]")).click();
-        driver.findElement(By.linkText("Inicio")).click();
-        driver.findElement(By.id("nombre")).click();
-        driver.findElement(By.id("nombre")).clear();
-        driver.findElement(By.id("nombre")).sendKeys("erejon");
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*Contraseña'])[1]/following::div[5]")).click();
-        driver.findElement(By.linkText("Recuperar Contraseña")).click();
-        driver.findElement(By.id("correo")).click();
-        driver.findElement(By.id("correo")).clear();
+        driver.findElement(By.id("email")).click();
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("erejon@walook.com.mx");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("Rejon150");
+        driver.findElement(By.id("password")).click();
+        driver.findElement(By.cssSelector("input[value='Iniciar sesion']")).click();
+        //String badMail=driver.findElement(By.cssSelector("p[color='color: #ff0000']")).getText();
+        //Assertions.assertEquals("Nombre de usuario o contraseña no válidos",badMail,"El elemento existe");
+        driver.findElement(By.id("email")).click();
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("benjamin.pina@gmail.com");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("Abcd1234");
+        driver.findElement(By.id("password")).click();
+        driver.findElement(By.cssSelector("input[value='Iniciar sesion']")).click();
+        driver.findElement(By.linkText("Usuario")).click();
+        driver.findElement(By.linkText("Cerrar sesión")).click();
+        driver.findElement(By.linkText("Recuperar contraseña")).click();
         driver.findElement(By.id("correo")).sendKeys("erejon@walook.com.mx");
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*Correo'])[1]/following::input[2]")).click();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Customer Pulse'])[1]/following::div[1]")).click();
+        driver.findElement(By.cssSelector("input[value='Enviar correo de recuperación']")).click();
+        Thread.sleep(5000);
     }
 
 

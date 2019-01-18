@@ -12,7 +12,7 @@ import java.util.Locale;
 public class AltaUsuario extends BaseTest{
 
     //Generating test data
-    Locale locale = new Locale("es_MX");
+    Locale locale = new Locale("es", "MX");
     Faker faker = new Faker(locale);
     String  firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
@@ -28,10 +28,11 @@ public class AltaUsuario extends BaseTest{
    // JavascriptExecutor js = (JavascriptExecutor) driver;
     @Test
     public void testAltaUsuario() throws Exception {
-
+        baseUrl = "http://qa.walook.com.mx:81/usuario";
         driver.get(baseUrl);
         try {
-            driver.findElement(By.linkText("Registro")).click();
+            //driver.findElement(By.linkText("Registro de usuario")).click();
+            //driver.findElement(By.cssSelector("input[value='Registrarse']")).click();
             driver.findElement(By.id("nombres")).click();
             driver.findElement(By.id("nombres")).clear();
             driver.findElement(By.id("nombres")).sendKeys(firstName);
