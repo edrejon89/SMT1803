@@ -12,6 +12,12 @@ public class CreacionEncuesta extends BaseTest{
     Faker faker = new Faker(locale);
     @Test
     public void crearEncuestaTest(){
+//        InicioSesion is = new InicioSesion();
+//        try{
+//        is.testInicioSesion();}
+//        catch (Exception e){
+//            e.getMessage();
+//        }
         driver.get("http://qa.walook.com.mx:81/encuesta");
         try {
             //driver.findElement(By.linkText("Inicio")).click();

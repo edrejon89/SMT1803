@@ -22,17 +22,17 @@ public class AltaUsuario extends BaseTest{
     String company = faker.company().name();
     String phone = faker.phoneNumber().phoneNumber();
     String email = faker.internet().emailAddress();
-
     String password = "Abcd1234";
     //Test Execution
    // JavascriptExecutor js = (JavascriptExecutor) driver;
     @Test
     public void testAltaUsuario() throws Exception {
         baseUrl = "http://qa.walook.com.mx:81/usuario";
+//        email="irodriguez@walook.com.mx";
         driver.get(baseUrl);
         try {
             //driver.findElement(By.linkText("Registro de usuario")).click();
-            //driver.findElement(By.cssSelector("input[value='Registrarse']")).click();
+           // driver.findElement(By.cssSelector("input[value='Registrarse']")).click();
             driver.findElement(By.id("nombres")).click();
             driver.findElement(By.id("nombres")).clear();
             driver.findElement(By.id("nombres")).sendKeys(firstName);
@@ -98,7 +98,9 @@ public class AltaUsuario extends BaseTest{
 
     public String mailCleaner(String input) {
         input =  Normalizer.normalize(email, Normalizer.Form.NFD);
-        String mailCleaned=input.replaceAll("\\p{M}", "");
+        String mailCleaned= input.replaceAll("\\p{M}", "");
+        mailCleaned = input.replace(" ","");
+
         return mailCleaned;
     }
 }

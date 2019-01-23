@@ -28,7 +28,7 @@ public class InicioSesion extends BaseTest{
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("Rejon150");
         driver.findElement(By.id("password")).click();
-        driver.findElement(By.cssSelector("input[value='Iniciar sesion']")).click();
+        driver.findElement(By.cssSelector("input[value='Iniciar sesión']")).click();
         //String badMail=driver.findElement(By.cssSelector("p[color='color: #ff0000']")).getText();
         //Assertions.assertEquals("Nombre de usuario o contraseña no válidos",badMail,"El elemento existe");
         driver.findElement(By.id("email")).click();
