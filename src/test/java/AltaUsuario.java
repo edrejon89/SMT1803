@@ -31,7 +31,7 @@ public class AltaUsuario extends BaseTest{
 //        email="irodriguez@walook.com.mx";
         driver.get(baseUrl);
         try {
-            //driver.findElement(By.linkText("Registro de usuario")).click();
+            //driver.fihttps://zoom.us/j/2045195496ndElement(By.linkText("Registro de usuario")).click();
            // driver.findElement(By.cssSelector("input[value='Registrarse']")).click();
             driver.findElement(By.id("nombres")).click();
             driver.findElement(By.id("nombres")).clear();
