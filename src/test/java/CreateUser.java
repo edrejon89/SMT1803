@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import sun.jvm.hotspot.utilities.Assert;
 
 public class CreateUser extends BaseTest{
@@ -21,14 +22,14 @@ public class CreateUser extends BaseTest{
 //        driver.findElement(By.linkText("Usuarios|")).click();
             driver.get("http://qa.walook.com.mx:81/usuarios");
             driver.findElement(By.linkText("Agregar usuario")).click();
-            driver.findElement(By.cssSelector("input[placeholder='Escriba el nombre']")).clear();
+            wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("input[placeholder='Escriba el nombre']"))).click();
             driver.findElement(By.cssSelector("input[placeholder='Escriba el nombre']")).sendKeys("xxx");
             driver.findElement(By.id("apellido-paterno")).clear();
             driver.findElement(By.id("apellido-paterno")).sendKeys("Rejon");
             driver.findElement(By.id("apellido-materno")).clear();
             driver.findElement(By.id("apellido-materno")).sendKeys("eduardo");
             driver.findElement(By.cssSelector("input[placeholder='Ingrese su correo electrónico']")).clear();
-            driver.findElement(By.cssSelector("input[placeholder='Ingrese su correo electrónico']")).sendKeys("eduard0@hotmail.com");
+            driver.findElement(By.cssSelector("input[placeholder='Ingrese su correo electrónico']")).sendKeys("eduardo@hotmail.com");
             driver.findElement(By.id("aplicador")).click();
             driver.findElement(By.xpath("//*[@id='btn-add-user']")).click();
             driver.findElement(By.xpath("/html/body/div[4]/div/div[4]/div/button"));
