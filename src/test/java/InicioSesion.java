@@ -46,5 +46,15 @@ public class InicioSesion extends BaseTest{
         Thread.sleep(5000);
     }
 
+    public void testInicioSesion(String mail, String pass){
+        driver.findElement(By.id("email")).click();
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys(mail);
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys(pass);
+        driver.findElement(By.id("password")).click();
+        driver.findElement(By.cssSelector("input[value='Iniciar sesión']")).click();
+    }
+
 
 }

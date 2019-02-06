@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="25b7b554-647f-444b-b6aa-66d353752cf4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/RecoverPassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/AltaUsuario.class" afterPath="$PROJECT_DIR$/target/test-classes/AltaUsuario.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/CreateUser.class" afterPath="$PROJECT_DIR$/target/test-classes/CreateUser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Clientes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/AltaUsuario.java" afterPath="$PROJECT_DIR$/src/test/java/AltaUsuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CreateUser.java" afterPath="$PROJECT_DIR$/src/test/java/CreateUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/InicioSesion.java" afterPath="$PROJECT_DIR$/src/test/java/InicioSesion.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,53 +17,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AltaUsuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/AltaUsuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecoverPassword.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/RecoverPassword.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InicioSesion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/InicioSesion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="514">
+              <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/CreateUser.java">
+      <file leaf-file-name="Clientes.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Clientes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="40" column="79" lean-forward="false" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
+            <state relative-caret-position="252">
+              <caret line="33" column="60" lean-forward="true" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,12 +64,13 @@
         <option value="$PROJECT_DIR$/src/test/java/NuevaPrueba.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/CreacionEncuesta.java" />
-        <option value="$PROJECT_DIR$/src/test/java/InicioSesion.java" />
         <option value="$PROJECT_DIR$/src/test/java/CreateUserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CreateUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/AltaUsuario.java" />
         <option value="$PROJECT_DIR$/src/test/java/RecoverPassword.java" />
+        <option value="$PROJECT_DIR$/src/test/java/InicioSesion.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Clientes.java" />
       </list>
     </option>
   </component>
@@ -116,8 +82,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="324" />
+    <option name="x" value="1949" />
+    <option name="y" value="23" />
     <option name="width" value="1366" />
     <option name="height" value="745" />
   </component>
@@ -137,6 +103,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,7 +134,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -190,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RecoverPassword.recoverPasswordTest">
+  <component name="RunManager" selected="JUnit.Clientes.clientesTest">
     <configuration name="AltaUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="smt1803" />
@@ -231,13 +197,13 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="CreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Clientes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="smt1803" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateUser" />
+      <option name="MAIN_CLASS_NAME" value="Clientes" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -251,14 +217,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="CreateUser.CreateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Clientes.clientesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="smt1803" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateUser" />
-      <option name="METHOD_NAME" value="CreateUserTest" />
+      <option name="MAIN_CLASS_NAME" value="Clientes" />
+      <option name="METHOD_NAME" value="clientesTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -375,17 +341,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AltaUsuario.testAltaUsuario" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.AltaUsuario" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CreateUser.CreateUserTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CreateUser" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RecoverPassword.recoverPasswordTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RecoverPassword.recoverPasswordTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Clientes.clientesTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Clientes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RecoverPassword.recoverPasswordTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AltaUsuario" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AltaUsuario.testAltaUsuario" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CreateUser.CreateUserTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CreateUser" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Clientes.clientesTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Clientes" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RecoverPassword.recoverPasswordTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AltaUsuario" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AltaUsuario.testAltaUsuario" />
       </list>
     </recent_temporary>
   </component>
@@ -407,26 +373,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CreateUser_CreateUserTest - 2019.01.30 at 12h 53m 15s.xml">
-      <configuration name="CreateUser.CreateUserTest" configurationId="JUnit" />
+    <history-entry file="Clientes - 2019.02.06 at 11h 44m 48s.xml">
+      <configuration name="Clientes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CreateUser_CreateUserTest - 2019.02.01 at 17h 28m 10s.xml">
-      <configuration name="CreateUser.CreateUserTest" configurationId="JUnit" />
+    <history-entry file="Clientes - 2019.02.06 at 11h 45m 32s.xml">
+      <configuration name="Clientes" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CreateUser_CreateUserTest - 2019.02.01 at 17h 32m 43s.xml">
-      <configuration name="CreateUser.CreateUserTest" configurationId="JUnit" />
+    <history-entry file="Clientes_clientesTest - 2019.02.06 at 11h 01m 13s.xml">
+      <configuration name="Clientes.clientesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 22h 47m 36s.xml">
-      <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
+    <history-entry file="Clientes_clientesTest - 2019.02.06 at 11h 01m 19s.xml">
+      <configuration name="Clientes.clientesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 22h 48m 53s.xml">
-      <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
+    <history-entry file="Clientes_clientesTest - 2019.02.06 at 11h 43m 47s.xml">
+      <configuration name="Clientes.clientesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 22h 50m 37s.xml">
-      <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 22h 51m 07s.xml">
-      <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
+    <history-entry file="Clientes_clientesTest - 2019.02.06 at 11h 46m 47s.xml">
+      <configuration name="Clientes.clientesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 22h 54m 24s.xml">
       <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
@@ -437,9 +400,12 @@
     <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 23h 08m 53s.xml">
       <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RecoverPassword_recoverPasswordTest - 2019.02.05 at 23h 11m 53s.xml">
+      <configuration name="RecoverPassword.recoverPasswordTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="324" width="1366" height="745" extended-state="0" />
+    <frame x="1949" y="23" width="1366" height="745" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -452,7 +418,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3953846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29984894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -460,7 +426,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39906102" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39846155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -485,13 +451,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/InicioSesion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -795,14 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/InicioSesion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -814,14 +765,14 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/AltaUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
-          <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CreateUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="420">
           <caret line="40" column="79" lean-forward="false" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -831,8 +782,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/RecoverPassword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="266">
+          <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/InicioSesion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Clientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="33" column="60" lean-forward="true" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
