@@ -13,13 +13,12 @@ import java.util.List;
 import java.util.Locale;
 
 public class CreateUser extends BaseTest{
-    String mail = "carlos.torres@prodigy.net.mx";
+    String mail = "erejon@walook.com.mx";
     Locale locale =  new Locale("ES","MX");
     Faker faker = new Faker(locale);
 
     @Test
     public void CreateUserTest() throws Exception {
-            mail = "jorge.mora@gmail.com";
             driver.get(baseUrl);
             driver.findElement(By.id("email")).click();
             driver.findElement(By.id("email")).clear();

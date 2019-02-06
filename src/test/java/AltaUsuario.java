@@ -28,8 +28,8 @@ public class AltaUsuario extends BaseTest{
     @Test
     public void testAltaUsuario() throws Exception {
         baseUrl = "http://qa.walook.com.mx:81/usuario";
-//        email="edreca_89@hotmail.com";
-       // email= "irma.marin@mailbox92.biz";
+//        email="erejon@walook.com.mx";
+//        email= "irma.marin@mailbox92.biz";
         driver.get(baseUrl);
         try {
             //driver.fihttps://zoom.us/j/2045195496ndElement(By.linkText("Registro de usuario")).click();
