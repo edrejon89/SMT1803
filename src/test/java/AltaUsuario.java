@@ -29,6 +29,7 @@ public class AltaUsuario extends BaseTest{
     public void testAltaUsuario() throws Exception {
         baseUrl = "http://qa.walook.com.mx:81/usuario";
 //        email="edreca_89@hotmail.com";
+       // email= "irma.marin@mailbox92.biz";
         driver.get(baseUrl);
         try {
             //driver.fihttps://zoom.us/j/2045195496ndElement(By.linkText("Registro de usuario")).click();
@@ -71,6 +72,9 @@ public class AltaUsuario extends BaseTest{
         }catch (Exception e){
             Assertions.fail(e.getMessage());
         }
+        System.out.println(email);
+        System.out.println(company);
+
     }
 
     //Funtions to clean our properties
@@ -97,9 +101,9 @@ public class AltaUsuario extends BaseTest{
     }
 
     public String mailCleaner(String input) {
-        input =  Normalizer.normalize(email, Normalizer.Form.NFD);
-        String mailCleaned= input.replaceAll("\\p{M}", "");
-        mailCleaned = input.replace(" ","");
+        input =  Normalizer.normalize(input, Normalizer.Form.NFD);
+        input= input.replaceAll("\\p{M}", "");
+        String mailCleaned = input.replaceAll(" ","");
 
         return mailCleaned;
     }
