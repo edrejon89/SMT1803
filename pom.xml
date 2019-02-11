@@ -59,6 +59,20 @@
             <version>0.14</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.github.azakordonets/fabricator -->
+        <dependency>
+            <groupId>com.github.azakordonets</groupId>
+            <artifactId>fabricator_2.10</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.devskiller/jfairy -->
+        <dependency>
+            <groupId>com.devskiller</groupId>
+            <artifactId>jfairy</artifactId>
+            <version>0.6.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
