@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import sun.jvm.hotspot.utilities.Assert;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -62,14 +63,16 @@ public class CU001RegistroUsuarioPropietario extends BaseTest{
 
         return mailCleaned;
     }
-
+    //Classes' methods
     public void registrarUsuario(){
+        email = "erejon@walook.com.mx" ;
         try {
-//            driver.findElement(By.linkText("Registro de usuario")).click();
+            //Process to validate cancel button
             driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
             driver.findElement(By.linkText("Cancelar")).click();
             String tituloLogin =  driver.findElement(By.cssSelector("h1[class='text-simetrical titulo']")).getText();
             Assertions.assertEquals("Customer Pulse",tituloLogin,"Botón cancelar funciona correctamente");
+           //Start method to create an account
             driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
             driver.findElement(By.id("nombres")).click();
             driver.findElement(By.id("nombres")).clear();
@@ -101,12 +104,17 @@ public class CU001RegistroUsuarioPropietario extends BaseTest{
             driver.findElement(By.id("ciudad")).sendKeys("Merida");
             driver.findElement(By.id("correo")).click();
             driver.findElement(By.id("correo")).clear();
-            driver.findElement(By.id("correo")).sendKeys(mailCleaner(email));
+            driver.findElement(By.id("correo")).sendKeys(mailCleaner(email.replace("@","")));
+            Thread.sleep(3000);
+            String failMail =  driver.findElement(By.id("correo")).getText();
+            Assertions.assertNotEquals(email,failMail);
             driver.findElement(By.id("contrasenia")).clear();
             driver.findElement(By.id("contrasenia")).sendKeys(password);
             driver.findElement(By.id("confirmar_contrasenia")).clear();
             driver.findElement(By.id("confirmar_contrasenia")).sendKeys(password);
             driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::button[1]")).click();
+            driver.findElement(By.id("correo")).clear();
+            driver.findElement(By.id("correo")).sendKeys(mailCleaner(email));
             driver.findElement(By.linkText("Aceptar")).click();
         }catch (Exception e){
             Assertions.fail(e.getMessage());
