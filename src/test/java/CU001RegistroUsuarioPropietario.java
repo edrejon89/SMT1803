@@ -1,16 +1,26 @@
+import com.devskiller.jfairy.Fairy;
+import com.devskiller.jfairy.producer.person.Person;
 import com.github.javafaker.Faker;
 import com.github.javafaker.PhoneNumber;
+import fabricator.Contact;
+import fabricator.Fabricator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.text.Normalizer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
-public class AltaUsuario extends BaseTest{
-
+public class CU001RegistroUsuarioPropietario extends BaseTest{
+//    Contact contact = Fabricator.contact();
+//    Fairy fairy = Fairy.create();
+//    Person person = fairy.person();
     //Generating test data
     Locale locale = new Locale("es", "MX");
     Faker faker = new Faker(locale);
@@ -23,17 +33,44 @@ public class AltaUsuario extends BaseTest{
     String phone = faker.phoneNumber().phoneNumber();
     String email = faker.internet().emailAddress();
     String password = "Abcd1234";
-    //Test Execution
    // JavascriptExecutor js = (JavascriptExecutor) driver;
-    @Test
-    public void testAltaUsuario() throws Exception {
-        baseUrl = "http://qa.walook.com.mx:81/usuario";
-//        email="erejon@walook.com.mx";
-//        email= "irma.marin@mailbox92.biz";
-        driver.get(baseUrl);
+
+
+    //Funtions to clean our properties
+    public String phoneClean (String input){
+        //input = Normalizer.normalize(input, Normalizer.Form.NFD);
+        input =  input.replace("x","").replace("(","")
+                .replace(")","").replace(".","")
+                .replace(" ","").replace("-","");
+        String phoneCleaned = input;
+        return phoneCleaned;
+    }
+
+    public String companyClean(String input){
+        input = input.replace(",","")
+                .replace("-","")
+                .replace(".","");
+        String companyCleaned = input;
+        return companyCleaned;
+
+    }
+
+    public String mailCleaner(String input) {
+        input =  Normalizer.normalize(input, Normalizer.Form.NFD);
+        input= input.replaceAll("\\p{M}", "");
+        String mailCleaned = input.replaceAll(" ","");
+
+        return mailCleaned;
+    }
+
+    public void registrarUsuario(){
         try {
-            //driver.fihttps://zoom.us/j/2045195496ndElement(By.linkText("Registro de usuario")).click();
-           // driver.findElement(By.cssSelector("input[value='Registrarse']")).click();
+//            driver.findElement(By.linkText("Registro de usuario")).click();
+            driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
+            driver.findElement(By.linkText("Cancelar")).click();
+            String tituloLogin =  driver.findElement(By.cssSelector("h1[class='text-simetrical titulo']")).getText();
+            Assertions.assertEquals("Customer Pulse",tituloLogin,"Botón cancelar funciona correctamente");
+            driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
             driver.findElement(By.id("nombres")).click();
             driver.findElement(By.id("nombres")).clear();
             driver.findElement(By.id("nombres")).sendKeys(firstName);
@@ -41,7 +78,9 @@ public class AltaUsuario extends BaseTest{
             driver.findElement(By.id("apellidop")).sendKeys(lastName);
             driver.findElement(By.id("apellidom")).clear();
             driver.findElement(By.id("apellidom")).sendKeys(secondLastName);
-            driver.findElement(By.name("genero")).click();
+            List<WebElement> genero = new ArrayList(driver.findElements(By.name("genero")));
+            Random r = new Random();
+            genero.get(r.nextInt(3)).click();
             driver.findElement(By.id("celular")).clear();
             driver.findElement(By.id("celular")).sendKeys(phoneClean(mobilePhone));
             driver.findElement(By.id("puestoempresarial")).clear();
@@ -72,40 +111,26 @@ public class AltaUsuario extends BaseTest{
         }catch (Exception e){
             Assertions.fail(e.getMessage());
         }
+    }
+
+
+
+
+
+
+
+
+
+    //Test Execution
+    @Test
+    public void testAltaUsuario() throws Exception {
+        ingresarCustomer();
+        registrarUsuario();
         System.out.println(email);
         System.out.println(company);
 
     }
 
-    //Funtions to clean our properties
 
-    public String phoneClean (String input){
-        //input = Normalizer.normalize(input, Normalizer.Form.NFD);
-        input =  input.replace("x","");
-        input =  input.replace("(","");
-        input =  input.replace(")","");
-        input =  input.replace(".","");
-        input =  input.replace(" ","");
-        input =  input.replace("-","");
-        String phoneCleaned = input;
-        return phoneCleaned;
-    }
-
-    public String companyClean(String input){
-        input = input.replace(",","");
-        input =  input.replace("-","");
-        input =   input.replace(".","");
-        String companyCleaned = input;
-        return companyCleaned;
-
-    }
-
-    public String mailCleaner(String input) {
-        input =  Normalizer.normalize(input, Normalizer.Form.NFD);
-        input= input.replaceAll("\\p{M}", "");
-        String mailCleaned = input.replaceAll(" ","");
-
-        return mailCleaned;
-    }
 }
 
