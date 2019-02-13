@@ -9,7 +9,7 @@ import java.util.List;
 public class CU005RecoverPassword extends BaseTest{
     @Test
     public void recoverPasswordTest(){
-        driver.get(baseUrl);
+        ingresarCustomer();
         WebElement language = driver.findElement(By.cssSelector("button[class='btn btn-language dropdown-toggle']"));
         language.click();
         List<WebElement> languages = new ArrayList(driver.findElements(By.cssSelector("a[class='dropdown-item dropdown-item-idioma']")));

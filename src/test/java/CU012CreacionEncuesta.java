@@ -156,7 +156,7 @@ public class CU012CreacionEncuesta extends BaseTest {
     //Test execution
     @Test
     public void CU012CreacionEncuestaTest() throws InterruptedException{
-        driver.get(baseUrl);
+        ingresarCustomer();
         is.testInicioSesion("erejon@walook.com.mx","Abcd1234");
 //        Random r = new Random();
 //        cantEncuesta = r.nextInt(5-1)+1;

@@ -19,7 +19,7 @@ import sun.jvm.hotspot.utilities.Assert;
 public class CU003InicioSesion extends BaseTest{
 
     public void testInicioSesion() throws Exception {
-        driver.get(baseUrl);
+        ingresarCustomer();
         driver.findElement(By.id("email")).click();
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("erejon@walook.com.mx");

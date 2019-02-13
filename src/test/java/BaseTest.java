@@ -80,7 +80,7 @@ public class BaseTest {
 
 
     public void ingresarCustomer(){
-        baseUrl = "http://qa.walook.com.mx:81/login";
+//        baseUrl = "http://qa.walook.com.mx:81/login";
         driver.get(baseUrl);
 
     }

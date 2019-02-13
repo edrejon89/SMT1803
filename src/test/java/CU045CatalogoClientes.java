@@ -30,7 +30,7 @@ public class CU045CatalogoClientes extends BaseTest{
 
     @Test
     public void clientesTest(){
-        driver.get(baseUrl);
+        ingresarCustomer();
         is.testInicioSesion("erejon@walook.com.mx","Abcd1234");
         moduloClientes();
         filtroCliente("Segura y Segura SRL",0);
