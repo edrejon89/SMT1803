@@ -37,7 +37,7 @@ public class CU001RegistroUsuarioPropietario extends BaseTest{
    // JavascriptExecutor js = (JavascriptExecutor) driver;
 
 
-    //Funtions to clean our properties
+    //Functions to clean properties
     public String phoneClean (String input){
         //input = Normalizer.normalize(input, Normalizer.Form.NFD);
         input =  input.replace("x","").replace("(","")
@@ -65,59 +65,82 @@ public class CU001RegistroUsuarioPropietario extends BaseTest{
     }
     //Classes' methods
     public void registrarUsuario(){
-        email = "erejon@walook.com.mx" ;
-        try {
-            //Process to validate cancel button
-            driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
-            driver.findElement(By.linkText("Cancelar")).click();
-            String tituloLogin =  driver.findElement(By.cssSelector("h1[class='text-simetrical titulo']")).getText();
-            Assertions.assertEquals("Customer Pulse",tituloLogin,"Botón cancelar funciona correctamente");
-           //Start method to create an account
-            driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
-            driver.findElement(By.id("nombres")).click();
-            driver.findElement(By.id("nombres")).clear();
-            driver.findElement(By.id("nombres")).sendKeys(firstName);
-            driver.findElement(By.id("apellidop")).clear();
-            driver.findElement(By.id("apellidop")).sendKeys(lastName);
-            driver.findElement(By.id("apellidom")).clear();
-            driver.findElement(By.id("apellidom")).sendKeys(secondLastName);
-            List<WebElement> genero = new ArrayList(driver.findElements(By.name("genero")));
-            Random r = new Random();
-            genero.get(r.nextInt(3)).click();
-            driver.findElement(By.id("celular")).clear();
-            driver.findElement(By.id("celular")).sendKeys(phoneClean(mobilePhone));
-            driver.findElement(By.id("puestoempresarial")).clear();
-            driver.findElement(By.id("puestoempresarial")).sendKeys(position);
-            driver.findElement(By.id("corporativo")).clear();
-            driver.findElement(By.id("corporativo")).sendKeys(companyClean(company));
-            driver.findElement(By.id("telempresa")).clear();
-            driver.findElement(By.id("telempresa")).sendKeys(phoneClean(phone));
-            //js.executeScript("window.scrollBy(0,1000)");
-            driver.findElement(By.id("industria")).click();
-            new Select(driver.findElement(By.id("industria"))).selectByVisibleText("Desarrollo de Software");
-            driver.findElement(By.id("pais")).click();
-            new Select(driver.findElement(By.id("pais"))).selectByVisibleText("México");
-            driver.findElement(By.id("estadomx")).click();
-            new Select(driver.findElement(By.id("estadomx"))).selectByVisibleText("Yucatán");
-            driver.findElement(By.id("ciudad")).click();
-            driver.findElement(By.id("ciudad")).clear();
-            driver.findElement(By.id("ciudad")).sendKeys("Merida");
-            driver.findElement(By.id("correo")).click();
-            driver.findElement(By.id("correo")).clear();
-            driver.findElement(By.id("correo")).sendKeys(mailCleaner(email.replace("@","")));
-            Thread.sleep(3000);
-            String failMail =  driver.findElement(By.id("correo")).getText();
-            Assertions.assertNotEquals(email,failMail);
-            driver.findElement(By.id("contrasenia")).clear();
-            driver.findElement(By.id("contrasenia")).sendKeys(password);
-            driver.findElement(By.id("confirmar_contrasenia")).clear();
-            driver.findElement(By.id("confirmar_contrasenia")).sendKeys(password);
-            driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::button[1]")).click();
-            driver.findElement(By.id("correo")).clear();
-            driver.findElement(By.id("correo")).sendKeys(mailCleaner(email));
-            driver.findElement(By.linkText("Aceptar")).click();
-        }catch (Exception e){
-            Assertions.fail(e.getMessage());
+//        email = "erejon@walook.com.mx" ;
+        InicioSesion is = new InicioSesion();
+
+        for (int i=0;i<2;i++) {
+            try {
+                //Process to validate cancel button
+                driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
+                driver.findElement(By.linkText("Cancelar")).click();
+                String tituloLogin =  driver.findElement(By.cssSelector("h1[class='text-simetrical titulo']")).getText();
+                Assertions.assertEquals("Customer Pulse",tituloLogin,"Botón cancelar funciona correctamente");
+               //Start method to create an account
+                driver.findElement(By.cssSelector("a[class='col-sm-10 btn btn-GrisC border float-right']")).click();
+                driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::button[1]")).click();
+                driver.findElement(By.id("nombres")).click();
+                driver.findElement(By.id("nombres")).clear();
+                driver.findElement(By.id("nombres")).sendKeys(firstName);
+                driver.findElement(By.id("apellidop")).clear();
+                driver.findElement(By.id("apellidop")).sendKeys(lastName);
+                driver.findElement(By.id("apellidom")).clear();
+                driver.findElement(By.id("apellidom")).sendKeys(secondLastName);
+                List<WebElement> genero = new ArrayList(driver.findElements(By.name("genero")));
+                Random r = new Random();
+                genero.get(r.nextInt(3)).click();
+                driver.findElement(By.id("celular")).clear();
+                driver.findElement(By.id("celular")).sendKeys(phoneClean(mobilePhone));
+                driver.findElement(By.id("puestoempresarial")).clear();
+                driver.findElement(By.id("puestoempresarial")).sendKeys(position);
+                driver.findElement(By.id("corporativo")).clear();
+                driver.findElement(By.id("corporativo")).sendKeys(companyClean(company));
+                driver.findElement(By.id("telempresa")).clear();
+                driver.findElement(By.id("telempresa")).sendKeys(phoneClean(phone));
+                //js.executeScript("window.scrollBy(0,1000)");
+                driver.findElement(By.id("industria")).click();
+                new Select(driver.findElement(By.id("industria"))).selectByVisibleText("Desarrollo de Software");
+                driver.findElement(By.id("pais")).click();
+                new Select(driver.findElement(By.id("pais"))).selectByVisibleText("México");
+                driver.findElement(By.id("estadomx")).click();
+                new Select(driver.findElement(By.id("estadomx"))).selectByVisibleText("Yucatán");
+                driver.findElement(By.id("ciudad")).click();
+                driver.findElement(By.id("ciudad")).clear();
+                driver.findElement(By.id("ciudad")).sendKeys("Merida");
+                driver.findElement(By.id("correo")).click();
+                driver.findElement(By.id("correo")).clear();
+                driver.findElement(By.id("correo")).sendKeys(mailCleaner(email.replace("@","")));
+                Thread.sleep(3000);
+                driver.findElement(By.id("contrasenia")).clear();
+                driver.findElement(By.id("contrasenia")).sendKeys(password);
+                driver.findElement(By.id("confirmar_contrasenia")).clear();
+                driver.findElement(By.id("confirmar_contrasenia")).sendKeys(password);
+                driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::button[1]")).click();
+                driver.findElement(By.id("correo")).clear();
+                driver.findElement(By.id("correo")).sendKeys(mailCleaner(email));
+                driver.findElement(By.id("confirmar_contrasenia")).clear();
+                driver.findElement(By.id("confirmar_contrasenia")).sendKeys(password.replace("A","a"));
+                driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::button[1]")).click();
+                driver.findElement(By.id("confirmar_contrasenia")).clear();
+                driver.findElement(By.id("confirmar_contrasenia")).sendKeys(password);
+
+                if (i==0) {
+                    driver.findElement(By.cssSelector("a[class='btn btn-dark']")).click();
+                    is.testInicioSesion(mailCleaner(email),password);
+                    String errorUser = driver.findElement(By.cssSelector("p[style='color: #ff0000']")).getText();
+                    Assertions.assertEquals("Nombre de usuario o contraseña no válidos",errorUser,"Se muestra el mensaje");
+                }else {
+                    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='*'])[14]/following::button[1]")).click();
+                    driver.findElement(By.linkText("Aceptar")).click();
+                    is.testInicioSesion(mailCleaner(email),password);
+                    String misEncuestas = driver.findElement(By.tagName("h1")).getText();
+
+                    Assertions.assertEquals("Mis encuestas",misEncuestas,"No se ingreso corrctamente");
+
+
+                }
+            }catch (Exception e){
+                Assertions.fail(e.getMessage());
+            }
         }
     }
 
