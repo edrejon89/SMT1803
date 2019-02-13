@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class sendSurveyByMail extends BaseTest{
+public class CU031sendSurveyByMail extends BaseTest{
     CU003InicioSesion is = new CU003InicioSesion();
 
     public void filtroEncuesta(String filtro, int tfiltro){

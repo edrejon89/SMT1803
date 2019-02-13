@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+
 public class CU012CreacionEncuesta extends BaseTest {
     Locale locale = new Locale("es_MX");
     Faker faker = new Faker(locale);

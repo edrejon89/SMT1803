@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.*;
 
 public class Comodin extends BaseTest {
-    InicioSesion is = new InicioSesion();
+    CU003InicioSesion is = new CU003InicioSesion();
     Locale locale = new Locale("ES","MX");
     Faker faker = new Faker(locale);
     String survey;
