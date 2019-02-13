@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecoverPassword extends BaseTest{
+public class CU005RecoverPassword extends BaseTest{
     @Test
     public void recoverPasswordTest(){
         driver.get(baseUrl);
