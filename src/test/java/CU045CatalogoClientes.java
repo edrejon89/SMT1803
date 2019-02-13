@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Clientes extends BaseTest{
+public class CU045CatalogoClientes extends BaseTest{
 
     protected CU003InicioSesion is = new CU003InicioSesion();
 
@@ -14,7 +14,7 @@ public class Clientes extends BaseTest{
     public void moduloClientes(){
         WebElement navAdmin = driver.findElement(By.linkText("Administrador"));
         navAdmin.click();
-        WebElement navUsuarios = driver.findElement(By.linkText("Clientes |"));
+        WebElement navUsuarios = driver.findElement(By.linkText("CU045CatalogoClientes |"));
         navUsuarios.click();
     }
 

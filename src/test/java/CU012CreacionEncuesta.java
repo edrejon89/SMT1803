@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-public class CreacionEncuesta extends BaseTest {
+public class CU012CreacionEncuesta extends BaseTest {
     Locale locale = new Locale("es_MX");
     Faker faker = new Faker(locale);
     CU003InicioSesion is = new CU003InicioSesion();
@@ -155,7 +155,7 @@ public class CreacionEncuesta extends BaseTest {
 
     //Test execution
     @Test
-    public void crearEncuestaTest() throws InterruptedException{
+    public void CU012CreacionEncuestaTest() throws InterruptedException{
         driver.get(baseUrl);
         is.testInicioSesion("erejon@walook.com.mx","Abcd1234");
 //        Random r = new Random();
