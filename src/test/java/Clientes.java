@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Clientes extends BaseTest{
 
-    protected InicioSesion is = new InicioSesion();
+    protected CU003InicioSesion is = new CU003InicioSesion();
 
 
     public void moduloClientes(){

@@ -16,10 +16,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import sun.jvm.hotspot.utilities.Assert;
 
 
-public class InicioSesion extends BaseTest{
+public class CU003InicioSesion extends BaseTest{
 
-
-    @Test
     public void testInicioSesion() throws Exception {
         driver.get(baseUrl);
         driver.findElement(By.id("email")).click();
@@ -54,6 +52,11 @@ public class InicioSesion extends BaseTest{
         driver.findElement(By.id("password")).sendKeys(pass);
         driver.findElement(By.id("password")).click();
         driver.findElement(By.cssSelector("input[value='Iniciar sesión']")).click();
+    }
+
+    @Test
+    public void CU003InicioSesionTest() throws Exception{
+        testInicioSesion();
     }
 
 

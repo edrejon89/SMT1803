@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class sendSurveyByMail extends BaseTest{
-    InicioSesion is = new InicioSesion();
+    CU003InicioSesion is = new CU003InicioSesion();
 
     public void filtroEncuesta(String filtro, int tfiltro){
         List<WebElement> formControl= new ArrayList(driver.findElements(By.className("form-control")));

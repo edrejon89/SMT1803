@@ -66,7 +66,7 @@ public class CU001RegistroUsuarioPropietario extends BaseTest{
     //Classes' methods
     public void registrarUsuario(){
 //        email = "erejon@walook.com.mx" ;
-        InicioSesion is = new InicioSesion();
+        CU003InicioSesion is = new CU003InicioSesion();
 
         for (int i=0;i<2;i++) {
             try {

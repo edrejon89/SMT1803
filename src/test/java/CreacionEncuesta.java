@@ -14,7 +14,7 @@ import java.util.Random;
 public class CreacionEncuesta extends BaseTest {
     Locale locale = new Locale("es_MX");
     Faker faker = new Faker(locale);
-    InicioSesion is = new InicioSesion();
+    CU003InicioSesion is = new CU003InicioSesion();
     protected String survey = faker.name().title();
 
     //Methods
