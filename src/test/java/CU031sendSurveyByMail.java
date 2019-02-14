@@ -23,7 +23,7 @@ public class CU031sendSurveyByMail extends BaseTest{
 
     @Test
     public void sendSurverByMail() throws InterruptedException{
-        driver.get(baseUrl);
+        ingresarCustomer();
         is.testInicioSesion("erejon@walook.com.mx","Abcd1234");
         filtroEncuesta("Cinepolis", 0);
         WebElement sendMail = driver.findElement(By.cssSelector("i[class='fa fa-light fa-envelope fa-2x']"));
